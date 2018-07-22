@@ -6,7 +6,6 @@
         'md-size-35': show,
         'md-size-100': !show,
       }">
-      <md-button class="md-raised" v-on:click="toggleShow">Toggle</md-button>
       <div class="entries" v-bind:class="{full: !show}">
         <div class="entry" v-for="entry in entries" v-bind:key="entry.key">
           <div class="padding"></div>
@@ -19,7 +18,7 @@
           <div class="entry-col delete">
             <i class="fas fa-trash-alt"></i>
           </div>
-          <div class="entry-col">
+          <div class="entry-col" v-on:click="toggleShow">
             <i class="fas fa-external-link-alt"></i>
           </div>
           <div class="padding"></div>
@@ -27,6 +26,34 @@
       </div>
     </div>
     <div class="md-layout-item pane right">
+      <md-field>
+        <label>名称</label>
+        <md-input></md-input>
+      </md-field>
+      <md-field>
+        <label>名称</label>
+        <md-input></md-input>
+      </md-field>
+      <md-field>
+        <label>名称</label>
+        <md-input></md-input>
+      </md-field>
+      <md-field>
+        <label>名称</label>
+        <md-input></md-input>
+      </md-field>
+      <md-field>
+        <label>名称</label>
+        <md-input></md-input>
+      </md-field>
+      <md-field>
+        <label>名称</label>
+        <md-input></md-input>
+      </md-field>
+      <md-field>
+        <label>名称</label>
+        <md-input></md-input>
+      </md-field>
     </div>
   </div>
 </template>
@@ -37,7 +64,7 @@ import { range } from 'lodash'
 export default {
   data() {
     return {
-      show: false,
+      show: true,
       entries: range(20).map(i => ({
         key: i.toString(),
         text: i + ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -46,6 +73,8 @@ export default {
   },
   methods: {
     toggleShow() {
+      console.log("FAFAFAF");
+      
       this.show = !this.show;
     },
   },
@@ -63,7 +92,12 @@ export default {
   &.left {
     background-color: #2e3d49;
     color: #fff;
+    height: 100%;
     transition: all 150ms ease-out;
+  }
+
+  &.right {
+    padding: 30px;
   }
 }
 
@@ -77,7 +111,7 @@ export default {
       align-items: center;
       font-size: 18px;
       padding: 15px 0px;
-      .entry-col:not(:first-of-type) {
+      .entry-col {
         margin: 0 20px
       }
     }
@@ -103,11 +137,10 @@ export default {
       display: flex;
       align-items: center;
       font-size: 12px;
-      width: 100%;
       padding: 0 10px;
     }
-    .entry-col:not(:first-child) {
-      margin-left: 10px
+    .entry-col {
+      margin: 10px
     }
   }
 }
