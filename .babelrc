@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    ["module-resolver", {
+      "alias": {
+        "vue": "vue/dist/vue.esm.js"
+      }
+    }]
+  ]
+}

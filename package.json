@@ -1,0 +1,35 @@
+{
+  "name": "vue-material-sample",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel src/index.html --open",
+    "build": "parcel build src/index.html --public-url ./",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taq-f/vue-material-sample.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taq-f/vue-material-sample/issues"
+  },
+  "homepage": "https://github.com/taq-f/vue-material-sample#readme",
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^2.1.0",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "lodash": "^4.17.10",
+    "node-sass": "^4.9.2",
+    "parcel-bundler": "^1.9.7",
+    "vue": "^2.5.16",
+    "vue-material": "^1.0.0-beta-10.2",
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "dependencies": {
+    "vue-hot-reload-api": "^2.3.0"
+  }
+}
