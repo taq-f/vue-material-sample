@@ -26,10 +26,23 @@
       </div>
     </div>
     <div class="md-layout-item pane right">
-      <md-field>
-        <label>名称</label>
-        <md-input></md-input>
-      </md-field>
+      <div class="md-layout">
+        <div class="md-layout-item">
+          <md-field>
+            <label></label>
+            <md-input type="month"></md-input>
+          </md-field>
+        </div>
+        <div class="md-layout-item md-size-5" style="display:flex; align-items:center; justify-content:center;">
+          〜
+        </div>
+        <div class="md-layout-item">
+          <md-field>
+            <label></label>
+            <md-input type="month"></md-input>
+          </md-field>
+        </div>
+      </div>
       <md-field>
         <label>名称</label>
         <md-input></md-input>
